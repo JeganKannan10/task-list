@@ -57,8 +57,6 @@
     <!-- Include datatable Js cdn -->
     <script src="https://cdn.datatables.net/2.0.1/js/dataTables.js"></script>
 
-    <script type="text/javascript" src="{{ asset('vendor/jsvalidation/js/jsvalidation.js')}}"></script>
-
     <!-- Include session toastr Js-->
     <script>
         @if(Session::has('success'))

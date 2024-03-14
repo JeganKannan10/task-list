@@ -66,7 +66,7 @@ class TaskController extends Controller
     {
         try {
             Task::create($request->validated());
-            return redirect()->route('tasks.index')->with('success', 'Task created successfully.');
+            return to_route('tasks.index')->with('success', 'Task created successfully.');
         } catch (\Exception $e) {
             Log::error('TaskController@store', [$e->getMessage()]);
         }
@@ -99,7 +99,7 @@ class TaskController extends Controller
     {
         try {
             $task->update($request->validated());
-            return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
+            return to_route('tasks.index')->with('success', 'Task updated successfully.');
         } catch (\Exception $e) {
             Log::error('TaskController@update', [$e->getMessage()]);
         }
@@ -116,7 +116,7 @@ class TaskController extends Controller
     {
         try {
             $task->delete();
-            return redirect()->route('tasks.index')->with('success', 'Task deleted successfully.');
+            return to_route('tasks.index')->with('success', 'Task deleted successfully.');
         } catch (\Exception $e) {
             Log::error('TaskController@destroy', [$e->getMessage()]);
         }

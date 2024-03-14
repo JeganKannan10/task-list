@@ -62,6 +62,3 @@
     </div>
 </div>
 @endsection
-@section('script')
-{!! JsValidator::formRequest('App\Http\Requests\TaskUpdateRequest') !!}
-@endsection
